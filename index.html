@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホタピィー AI チャットボット</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- チャットボタン（右下） -->
+    <button id="chatButton" class="chat-button">
+        <span class="chat-icon">🐚</span>
+        <span class="chat-text">ホタピィーに話しかける</span>
+    </button>
+
+    <!-- チャットウィンドウ -->
+    <div id="chatWindow" class="chat-window hidden">
+        <!-- ヘッダー -->
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="avatar-container">
+                    <img id="avatarImage" src="/public/hotapii-character.png" alt="ホタピィー" class="avatar-image">
+                    <div class="mouth-overlay" id="mouthOverlay"></div>
+                </div>
+                <div class="header-text">
+                    <h2>ホタピィー</h2>
+                    <p>ホタテの魅力を世界に広める！</p>
+                </div>
+            </div>
+            <button id="closeButton" class="close-button">✕</button>
+        </div>
+
+        <!-- メッセージ表示エリア -->
+        <div id="messagesContainer" class="messages-container">
+            <div class="message bot-message">
+                <div class="message-content">
+                    ホタ〜！🐚 ホタピィーだホタ！<br>
+                    何かお話しできることがあったら、気軽に聞いてホタ〜！
+                </div>
+            </div>
+        </div>
+
+        <!-- 入力エリア -->
+        <div class="chat-footer">
+            <form id="chatForm" class="chat-form">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="ホタピィーに話しかけてね..."
+                    autocomplete="off"
+                    maxlength="500"
+                >
+                <button type="submit" class="send-button">送信</button>
+            </form>
+            <div class="loading hidden" id="loadingIndicator">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
